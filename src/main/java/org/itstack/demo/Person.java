@@ -1,15 +1,13 @@
 package org.itstack.demo;
 
-@Hint("hint1")
-@Hint("hint2")
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
 public class Person {
     String firstName;
     String lastName;
-
-    Person() {}
-
-    Person(String firstName, String lastName) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-    }
 }

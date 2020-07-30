@@ -29,7 +29,12 @@ public class OptionalTest {
     @Test
     public void ifPresent() {
         String name = null;
+        if(name != null) {
+            System.out.println("hello " + name+ ".");
+        }
+        Optional.ofNullable(name).ifPresent(s-> System.out.println("hello " + name));
         Optional.ofNullable(name).ifPresent(System.out::println);
+        Optional.ofNullable(name).orElse("897");
     }
 
     @Test
